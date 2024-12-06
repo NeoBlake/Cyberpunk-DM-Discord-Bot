@@ -1,0 +1,14 @@
+const { Client, CommandInteraction, MessageActionRow, MessageButton, MessageEmbed, MessageSelectMenu } = require("discord.js");
+const chalk = require("chalk");
+async function temp(interaction) {
+    console.log("temp has started")
+    const Data = require("../../../../models/temp");
+    Data.findOne({
+        userID: interaction.user.id
+      }, async (err, data) => {
+        console.log("temp has ended")
+    })};
+    
+module.exports = {
+    temp
+}
